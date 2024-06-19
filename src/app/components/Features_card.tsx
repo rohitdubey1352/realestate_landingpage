@@ -1,7 +1,12 @@
 import Image from "next/image";
 import React from "react";
 
-export default function Features_card(props) {
+interface FeaturesCardProps {
+  url: string;
+  heading: string;
+}
+
+const Features_card: React.FC<FeaturesCardProps> = (props) => {
   return (
     <>
       <div className="card relative flex flex-col items-center my-5">
@@ -20,4 +25,6 @@ export default function Features_card(props) {
       </div>
     </>
   );
-}
+};
+
+export default Features_card;
